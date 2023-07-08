@@ -18,6 +18,8 @@ const addTask = () => {
         localStorage.setItem('tasks', JSON.stringify(tasks))
     }
     updateTasks()
+    document.querySelector('#task-name').value = ''
+    document.querySelector('#task-desc').value = ''
 
 }
 
@@ -32,7 +34,7 @@ const updateTasks = () => {
             // taskContainer.appendChild()
 
             str += `
-           <div class="card my-4" style="width: 18rem;">
+           <div class="card my-4" style="width: 70rem;">
                 ${index+1}
            <div class="card-body">
                <h5 class="card-title">${tasks[0]}</h5>
